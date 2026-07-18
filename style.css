@@ -148,6 +148,21 @@ a:focus-visible {
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header, .main-projects h3, .main-projects > div, .side-projects h3, .side-projects > div {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
 @keyframes petalsAnimation {
     from {
         transform: translateY(0%);

@@ -22,6 +22,12 @@ function petals() {
     return element;
 }
 
+    // loop for generating flower petals
     for(let i = 0; i < 50; i++) {
         container.append(petals())
     }
+
+    // staggered loading here
+    document.querySelectorAll('.header, .main-projects h3, .main-projects > div, .side-projects h3, .side-projects > div').forEach((el, i) => {
+        el.style.animationDelay = (i * 0.15) + "s";
+    });
